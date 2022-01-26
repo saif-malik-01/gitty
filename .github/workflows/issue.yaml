@@ -1,12 +1,12 @@
 name: Create a commet on new issues
 
-on 
+on:
   issues:
     types: [opened]
     
     
 jobs:
-  comment-on-issue
+  comment-on-issue:
     runs-on: ubuntu-latest
     steps: 
      - name: "dump"
