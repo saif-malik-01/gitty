@@ -12,7 +12,7 @@ jobs:
     hello:
       runs-on: ubuntu-latest
       steps: 
-      - used: action/checkout@v2
+      - uses: action/checkout@v2
       - name: hello world
         run: echo "saif"
         shell: bash
