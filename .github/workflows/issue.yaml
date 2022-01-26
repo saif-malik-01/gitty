@@ -1,0 +1,19 @@
+name: Create a commet on new issues
+
+on 
+  issues:
+    types: [opened]
+    
+    
+jobs:
+  comment-on-issue
+    runs-on: ubuntu-latest
+    steps: 
+     - name: "dump"
+       uses: peter-evans/create-or-update-comment@v1
+       with:
+         issue-number: ${{github.event.issue.number}}
+         body: | 
+            This is a multiline 
+            - with github **mark** :sds:
+            - created by [create-or-update-comment][1]
